@@ -33,6 +33,46 @@
 		<!-- Head Libs -->
 		<script async src="assets/vendors/modernizr.min.js"></script>
 
+		<style>
+			@media (max-width: 1199px) { /* Adjust the breakpoint as necessary */
+				.main-header {
+					background-color: rgba(19, 19, 19, 0.833) !important; /* Black with 0.8 opacity */
+				}
+
+				.main-header .navbar-header {
+					background-color: rgba(52, 50, 50, 0) !important; /* Transparent */
+				}
+
+				.navbar-collapse {
+					max-height: 75vh;
+					color: #ffffff;
+					box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+					background-color: rgba(0, 0, 0, 0) !important; /* Transparent */
+					display: block !important; /* Ensure it is visible */
+				}
+
+				/* Ensure the toggle button is visible */
+				.navbar-toggle {
+					display: block !important; /* Ensure the toggle button is visible */
+				}
+			}
+
+			/* Add these new styles for the orange button background */
+			.btn-gradient .btn-gradient-bg {
+				background: linear-gradient(to right, #fe506c 0%, #fc6a2a 100%) !important;
+			}
+			
+			.btn-gradient .btn-gradient-bg-hover {
+				background: linear-gradient(to right, #fc6a2a 0%, #fe506c 100%) !important;
+			}
+			
+			/* Ensure text is visible on orange background */
+			.btn-gradient .btn-txt {
+				color: #ffffff !important;
+			}
+
+		</style>
+
 	</head>
 
 	<body data-mobile-nav-trigger-alignment="right" data-mobile-nav-align="left" data-mobile-nav-style="minimal" data-mobile-nav-shceme="gray" data-mobile-header-scheme="gray" data-mobile-nav-breakpoint="1199">
@@ -51,11 +91,11 @@
 									<div class="navbar-header">
 										<a class="navbar-brand" href="index.html" rel="home">
 											<span class="navbar-brand-inner">
-												<img class="logo-dark" src="./assets/img/logo/logo-1.svg" alt="Ave HTML Template">
-												<img class="logo-light" src="./assets/img/logo/logo-light.svg" alt="Ave HTML Template">
-												<img class="logo-sticky" src="./assets/img/logo/logo-1.svg" alt="Ave HTML Template">
-												<img class="mobile-logo-default" src="./assets/img/logo/logo-1.svg" alt="Ave HTML Template">
-												<img class="logo-default" src="./assets/img/logo/logo-light.svg" alt="Ave HTML Template">
+												<img class="logo-dark" src="./logo_beer.png" width="140px" alt="BeerFinder App">
+												<img class="logo-light" src="./logo_beer.png" width="140px" alt="BeerFinder App">
+												<img class="logo-sticky" src="./logo_beer.png" width="140px" alt="BeerFinder App">
+												<img class="mobile-logo-default" src="./logo_beer.png" width="100px" alt="BeerFinder App">
+												<img class="logo-default" src="./logo_beer.png" width="140px" alt="BeerFinder App">
 											</span>
 										</a>
 										<button type="button" class="navbar-toggle collapsed nav-trigger style-mobile" data-toggle="collapse"
@@ -99,20 +139,11 @@
 
 									<div class="header-module">
 
-										<a href="https://app.beerfinderapp.com/" class="btn btn-solid btn-sm round btn-solid border-thick btn-gradient color-secondary font-size-14">
+										<a href="https://app.beerfinderapp.com/" class="btn btn-solid btn-sm round btn-gradient color-secondary font-size-14">
 											<span>
 												<span class="btn-gradient-bg"></span>
 												<span class="btn-txt">OPEN APP</span>
 												<span class="btn-gradient-bg btn-gradient-bg-hover"></span>
-												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" class="btn-gradient-border" width="100%" height="100%">
-													<defs>
-														<linearGradient id="svg-border-5c594d6934526" x1="0%" y1="0%" x2="100%" y2="0%">
-															<stop offset="0%" style="stop-color: #0287ed;"></stop>
-															<stop offset="100%" style="stop-color: #03afe0;"></stop>
-														</linearGradient>
-													</defs>
-													<rect x="0.5" y="0.5" rx="4px" ry="4px" width="100%" height="100%" stroke="url(#svg-border-5c594d6934526)"></rect>
-												</svg>
 											</span>
 										</a>
 										
@@ -129,7 +160,7 @@
 
 			<main id="content" class="content">
 
-				<section class="vc_row fullheight d-flex flex-wrap align-items-center bg-cover pt-150 pb-150" style="background-image: url(./assets/demo/bg/bg-14.jpg);" data-parallax="true" data-parallax-options='{ "parallaxBG": true }'>
+				<section class="vc_row fullheight d-flex flex-wrap align-items-center bg-cover pt-150 pb-150" style="background-image: url(./bg-image.jpg); background-size: contain; background-position: center;" data-parallax="true" data-parallax-options='{ "parallaxBG": true }'>
 
 					<div class="container">
 						<div class="row">
@@ -140,7 +171,7 @@
 								data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":"1200","delay":"150","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":60,"translateZ":-150,"rotateX":-65,"opacity":0},"animations":{"translateY":0,"translateZ":0,"rotateX":0,"opacity":1}}'>
 
 								<h1 class="text-white pr-md-5 mt-0 mb-40" data-split-text="true" data-split-options='{"type":"lines"}'>Find the BEST BEER at the BEST PRICE Near you </h1>
-								<p class="text-white font-size-16 lh-185 pr-md-7 mb-60" data-split-text="true" data-split-options='{"type":"lines"}'>With BeerFinder, discover the perfect spots to enjoy a drink without breaking the bank. Compare prices, explore venues and make every sip count.</p>
+								<p class="text-white font-size-16 lh-185 pr-md-7 mb-60">With BeerFinder, discover the perfect spots to enjoy a drink without breaking the bank. Compare prices, explore venues and make every sip count.</p>
 
 								<a href="https://app.beerfinderapp.com/" class="btn btn-solid text-uppercase semi-round btn-solid border-thin btn-gradient font-size-14 font-weight-semibold ltr-sp-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
 									<span>
@@ -250,7 +281,7 @@
 					<div class="container">
 						<div class="row d-flex flex-wrap align-items-center">
 
-							<div class="lqd-column col-md-7 hidden-sm hidden-xs">
+							<div class="lqd-column col-md-7">
 
 								<div class="lqd-parallax-images-3">
 
@@ -396,11 +427,10 @@
 								<div class="liquid-img-group-container stretch-to-right">
 									<div class="liquid-img-group-inner">
 										<div class="liquid-img-group-single liquid-img-group-browser" data-shadow-style="4" data-inview="true" data-animate-shadow="true" data-reveal="true" data-reveal-options='{"direction":"lr"}'>
-											<span class="liquid-img-group-url"><span>http://</span>avetheme.com</span>
 											<div class="liquid-img-group-img-container">
 												<div class="liquid-img-container-inner">
 													<figure data-responsive-bg="true">
-														<img src="./assets/demo/misc/browser-sc-2.jpg" alt="Ave" />
+														<img src="./assets/demo/misc/browser-sc-2.jpg" alt="Beer Finder" />
 													</figure>
 												</div><!-- /.liquid-img-container-inner -->
 											</div><!-- /.liquid-img-group-img-container -->
@@ -414,7 +444,7 @@
 					</div><!-- /.container -->
 				</section>
 
-				<section class="vc_row pt-250 pb-250 mt-80 mb-80 bg-cover bg-center" style="background-image: url(./lisbon_beer_outside.jpg);" data-parallax="true" data-parallax-options='{ "parallaxBG": true }'>
+				<section class="vc_row pt-250 pb-250 mt-80 mb-80 bg-cover bg-center" style="background-image: url(./lisbon_beer_outside.jpg); background-size: cover; background-position: center;" data-parallax="true" data-parallax-options='{ "parallaxBG": true }'>
 					<div class="container">
 						<div class="row">
 
@@ -431,7 +461,7 @@
 													<blockquote>
 														<p>
 															<span style="font-size: 36px; line-height: 55px; color: #ffffff;">
-																“With BeerFinder, I never overpay for a beer! The app is practical and indispensable”
+																"With BeerFinder, I never overpay for a beer! The app is practical and indispensable"
 															</span>
 														</p>
 													</blockquote>
@@ -455,7 +485,7 @@
 												<div class="testimonial-quote">
 													<blockquote>
 														<p>
-															<span style="font-size: 36px; line-height: 55px; color: #ffffff;">“Perfect for travelling! I found incredible beers in places I'd never discover alone.”</span>
+															<span style="font-size: 36px; line-height: 55px; color: #ffffff;">"Perfect for travelling! I found incredible beers in places I'd never discover alone."</span>
 														</p>
 													</blockquote>
 												</div>
@@ -505,7 +535,7 @@
 											<p class="text-white mb-55">
 												and discover how to save while enjoying the best beers
 											</p>
-		
+	
 											<a href="https://app.beerfinderapp.com/" class="btn btn-solid btn-md round btn-solid border-thick btn-gradient color-secondary font-size-14 text-uppercase font-weight-bold ltr-sp-1 px-2">
 												<span>
 													<span class="btn-gradient-bg"></span>
@@ -514,8 +544,8 @@
 													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" class="btn-gradient-border" width="100%" height="100%">
 														<defs>
 															<linearGradient id="svg-border-5c594d69345261" x1="0%" y1="0%" x2="100%" y2="0%">
-																<stop offset="0%" style="stop-color: #0287ed;"></stop>
-																<stop offset="100%" style="stop-color: #03afe0;"></stop>
+																<stop offset="0%" style="stop-color: #fe506c;"></stop>
+																<stop offset="100%" style="stop-color: #fc6a2a;"></stop>
 															</linearGradient>
 														</defs>
 														<rect x="0.5" y="0.5" rx="4px" ry="4px" width="100%" height="100%" stroke="url(#svg-border-5c594d69345261)"></rect>
@@ -554,7 +584,7 @@
 							<div class="lqd-column col-md-4 mb-4 mb-md-0 text-center text-md-left">
 
 								<figure>
-									<img src="./assets/img/logo/logo-light.svg" alt="Ave">
+									<img src="./logo_beer.png" alt="Beer Finder" width="140px">
 								</figure>
 			
 							</div><!-- /.col-md-4 -->
