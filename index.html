@@ -34,26 +34,63 @@
 		<script async src="assets/vendors/modernizr.min.js"></script>
 
 		<style>
-			@media (max-width: 1199px) { /* Adjust the breakpoint as necessary */
-				.main-header {
-					background-color: rgba(19, 19, 19, 0.833) !important; /* Black with 0.8 opacity */
+			@media (max-width: 1199px) { /* Mobile view */
+				/* Hide desktop version of OPEN APP button */
+				.header-module:not(.navbar-header) {
+					display: none !important;
 				}
 
 				.main-header .navbar-header {
-					background-color: rgba(52, 50, 50, 0) !important; /* Transparent */
+					background-color: #0000 !important;
+				}
+				
+				/* Show mobile version of OPEN APP button */
+				.navbar-header .mobile-app-button {
+					display: inline-block !important;
 				}
 
-				.navbar-collapse {
-					max-height: 75vh;
-					color: #ffffff;
-					box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
-					background-color: rgba(0, 0, 0, 0) !important; /* Transparent */
-					display: block !important; /* Ensure it is visible */
+				.mainbar-row > [class^=col].text-right {
+					padding-top: 20px;
 				}
 
-				/* Ensure the toggle button is visible */
-				.navbar-toggle {
-					display: block !important; /* Ensure the toggle button is visible */
+				/* Position the mobile menu on top */
+				.navbar-collapse.header-module {
+					position: fixed !important;
+					top: 80px !important; /* Adjust this value based on your header height */
+					left: 0 !important;
+					right: 0 !important;
+					z-index: 1000 !important;
+					background-color: rgba(0, 0, 0, 0.8) !important;
+					padding: 20px !important;
+					width: 100% !important;
+				}
+
+				/* Ensure the header is above other content but below the menu */
+				.main-header {
+					background-color: rgba(19, 19, 19, 0.833) !important;
+					position: relative !important;
+					z-index: 999 !important;
+				}
+
+				/* Make menu text white */
+				.main-nav .txt {
+					color: #ffffff !important;
+				}
+			}
+
+			@media (min-width: 1200px) { /* Desktop view */
+				/* Show desktop version of OPEN APP button */
+				.header-module:not(.navbar-header) {
+					display: block !important;
+				}
+				
+				/* Hide mobile version of OPEN APP button */
+				.navbar-header .mobile-app-button {
+					display: none !important;
+				}
+
+				.mainbar-row > [class^=col].text-right {
+					padding-top: 20px;
 				}
 			}
 
@@ -98,21 +135,22 @@
 												<img class="logo-default" src="./logo_beer.png" width="140px" alt="BeerFinder App">
 											</span>
 										</a>
-										<button type="button" class="navbar-toggle collapsed nav-trigger style-mobile" data-toggle="collapse"
-										 data-target="#main-header-collapse" aria-expanded="false" data-changeclassnames='{ "html": "mobile-nav-activated overflow-hidden" }'>
-											<span class="sr-only">Toggle navigation</span>
-											<span class="bars">
-												<span class="bar"></span>
-												<span class="bar"></span>
-												<span class="bar"></span>
-											</span>
-										</button>
+
+										<span class="mobile-app-button" style="width: 100px !important;">
+											<a href="https://app.beerfinderapp.com/" class="btn btn-solid btn-sm round btn-gradient color-secondary font-size-14">
+												<span style="width: 100px !important;">
+													<span class="btn-gradient-bg"></span>
+													<span class="btn-txt">OPEN APP</span>
+													<span class="btn-gradient-bg btn-gradient-bg-hover"></span>
+												</span>
+											</a>
+										</span>
 									</div><!-- /.navbar-header -->
 								</div><!-- /.col -->
 
 								<div class="col text-right">
 
-									<div class="collapse navbar-collapse" id="main-header-collapse" aria-expanded="false" role="tablist">
+									<div class="navbar-collapse header-module" id="main-header-collapse" aria-expanded="false" role="tablist">
 										
 										<ul class="main-nav main-nav-hover-underline-1 nav align-items-lg-stretch justify-content-lg-end">
 											<li>
@@ -138,7 +176,6 @@
 									</div><!-- /.collapse -->
 
 									<div class="header-module">
-
 										<a href="https://app.beerfinderapp.com/" class="btn btn-solid btn-sm round btn-gradient color-secondary font-size-14">
 											<span>
 												<span class="btn-gradient-bg"></span>
@@ -146,7 +183,6 @@
 												<span class="btn-gradient-bg btn-gradient-bg-hover"></span>
 											</span>
 										</a>
-										
 									</div><!-- /.header-module -->
 
 								</div><!-- /.col -->
