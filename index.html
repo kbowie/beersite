@@ -108,6 +108,80 @@
 				color: #ffffff !important;
 			}
 
+			/* Google Play Store Button Styles */
+			.google-play-btn {
+				display: inline-flex;
+				align-items: center;
+				background: #fff;
+				color: #000;
+				border: 1px solid #333;
+				padding: 1.15em 2.1em;
+				border-radius: 1em;
+				text-decoration: none;
+				font-family: 'Roboto', Arial, sans-serif;
+				font-size: 14px;
+				font-weight: 500;
+				transition: all 0.3s ease;
+				cursor: pointer;
+				line-height: 2em;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+				vertical-align: middle;
+			}
+
+			.google-play-btn:hover {
+				background: #f5f5f5;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+				text-decoration: none;
+				color: #000;
+			}
+
+			.google-play-btn .play-icon {
+				width: 24px;
+				height: 24px;
+				margin-right: 12px;
+				fill: currentColor;
+			}
+
+			.google-play-btn .btn-text {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				line-height: 1.2;
+			}
+
+			.google-play-btn .btn-text .small {
+				font-size: 10px;
+				opacity: 0.8;
+			}
+
+			.google-play-btn .btn-text .large {
+				font-size: 14px;
+				font-weight: 500;
+			}
+
+			@media (max-width: 768px) {
+				.google-play-btn {
+					padding: 1.15em 2.1em;
+					font-size: 12px;
+					line-height: 2em;
+				}
+
+				.google-play-btn .play-icon {
+					width: 20px;
+					height: 20px;
+					margin-right: 10px;
+				}
+
+				.google-play-btn .btn-text .small {
+					font-size: 9px;
+				}
+
+				.google-play-btn .btn-text .large {
+					font-size: 12px;
+				}
+			}
+
 		</style>
 
 	</head>
@@ -137,14 +211,17 @@
 										</a>
 
 										<span class="mobile-app-button" style="width: 100px !important;">
-											<a href="https://app.beerfinderapp.com/" class="btn btn-solid btn-sm round btn-gradient color-secondary font-size-14">
-												<span style="width: 100px !important;">
-													<span class="btn-gradient-bg"></span>
-													<span class="btn-txt">OPEN APP</span>
-													<span class="btn-gradient-bg btn-gradient-bg-hover"></span>
-												</span>
+											<a href="https://play.google.com/store/apps/details?id=com.ccetours.beerfinder" target="_blank" class="google-play-btn" style="margin: 0; padding: 0.8em 1.2em; font-size: 10px;">
+												<svg class="play-icon" viewBox="0 0 24 24" style="width: 16px; height: 16px; margin-right: 6px;">
+													<path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+												</svg>
+												<div class="btn-text">
+													<span class="small" style="font-size: 8px;">GET IT ON</span>
+													<span class="large" style="font-size: 10px;">Google Play</span>
+												</div>
 											</a>
 										</span>
+
 									</div><!-- /.navbar-header -->
 								</div><!-- /.col -->
 
@@ -176,14 +253,18 @@
 									</div><!-- /.collapse -->
 
 									<div class="header-module">
-										<a href="https://app.beerfinderapp.com/" class="btn btn-solid btn-sm round btn-gradient color-secondary font-size-14">
-											<span>
-												<span class="btn-gradient-bg"></span>
-												<span class="btn-txt">OPEN APP</span>
-												<span class="btn-gradient-bg btn-gradient-bg-hover"></span>
-											</span>
+										<a href="https://play.google.com/store/apps/details?id=com.ccetours.beerfinder" target="_blank" class="google-play-btn">
+											<svg class="play-icon" viewBox="0 0 24 24">
+												<path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+											</svg>
+											<div class="btn-text">
+												<span class="small">GET IT ON</span>
+												<span class="large">Google Play</span>
+											</div>
 										</a>
 									</div><!-- /.header-module -->
+
+									
 
 								</div><!-- /.col -->
 
@@ -209,10 +290,11 @@
 								<h1 class="text-white pr-md-5 mt-0 mb-40" data-split-text="true" data-split-options='{"type":"lines"}'>Find the BEST BEER at the BEST PRICE Near you </h1>
 								<p class="text-white font-size-16 lh-185 pr-md-7 mb-60">With BeerFinder, discover the perfect spots to enjoy a drink without breaking the bank. Compare prices, explore venues and make every sip count.</p>
 
-								<a href="https://app.beerfinderapp.com/" class="btn btn-solid text-uppercase semi-round btn-solid border-thin btn-gradient font-size-14 font-weight-semibold ltr-sp-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
+
+								<a href="https://app.beerfinderapp.com/" class="btn btn-solid text-uppercase semi-round btn-solid border-thin btn-gradient font-size-14 font-weight-semibold ltr-sp-1 px-2">
 									<span>
 										<span class="btn-gradient-bg"></span>
-										<span class="btn-txt">Why BeerFinder?</span>
+										<span class="btn-txt">Open web App</span>
 										<span class="btn-gradient-bg btn-gradient-bg-hover"></span>
 										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" class="btn-gradient-border" width="100%" height="100%">
 											<defs>
@@ -226,21 +308,14 @@
 									</span>
 								</a>
 
-								<a href="https://app.beerfinderapp.com/" class="btn btn-solid text-uppercase semi-round btn-solid border-thin btn-gradient font-size-14 font-weight-semibold ltr-sp-1 px-2">
-									<span>
-										<span class="btn-gradient-bg"></span>
-										<span class="btn-txt">Open App</span>
-										<span class="btn-gradient-bg btn-gradient-bg-hover"></span>
-										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" class="btn-gradient-border" width="100%" height="100%">
-											<defs>
-												<linearGradient id="svg-border-5c596b4b59c72" x1="0%" y1="0%" x2="100%" y2="0%">
-													<stop offset="0%"></stop>
-													<stop offset="100%"></stop>
-												</linearGradient>
-											</defs>
-											<rect x="0.5" y="0.5" rx="2px" ry="2px" width="100%" height="100%" stroke="url(#svg-border-5c596b4b59c72)"></rect>
-										</svg>
-									</span>
+								<a href="https://play.google.com/store/apps/details?id=com.ccetours.beerfinder" target="_blank" class="google-play-btn" style="margin-left: 20px;">
+									<svg class="play-icon" viewBox="0 0 24 24">
+										<path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+									</svg>
+									<div class="btn-text">
+										<span class="small">GET IT ON</span>
+										<span class="large">Google Play</span>
+									</div>
 								</a>
 
 								<ul class="social-icon scheme-white social-icon-md mt-70 mb-150">
@@ -263,7 +338,7 @@
 												<div class="liquid-img-group-img-container">
 													<div class="liquid-img-container-inner" data-parallax="true" data-parallax-from='{"translateX":1,"translateY":1}' data-parallax-to='{"translateX":-17,"translateY":-27}' data-parallax-options='{"overflowHidden":false,"easing":"linear"}'>
 														<figure>
-															<img alt="Manage" src="./assets/demo/misc/sc-2.png" />
+															<img alt="Manage" src="./imgs/sc-2.png" />
 														</figure>
 													</div><!-- /.liquid-img-container-inner -->
 												</div><!-- /.liquid-img-group-container -->
@@ -271,13 +346,13 @@
 										</div><!-- /.liquid-img-group-inner -->
 									</div><!-- /.liquid-img-group-container -->
 	
-									<div class="liquid-img-group-container w-70">
+									<div class="liquid-img-group-container w-50">
 										<div class="liquid-img-group-inner">
 											<div class="liquid-img-group-single" data-shadow-style="3" data-roundness="8">
 												<div class="liquid-img-group-img-container">
 													<div class="liquid-img-container-inner" data-parallax="true" data-parallax-from='{"translateX":1,"translateY":1}' data-parallax-to='{"translateX":-45,"translateY":-69}' data-parallax-options='{"overflowHidden":false,"easing":"linear"}'>
 														<figure>
-															<img alt="Manage" src="./assets/demo/misc/sc-3.jpg" />
+															<img alt="Manage" src="./imgs/sc-3.png" />
 														</figure>
 													</div><!-- /.liquid-img-container-inner -->
 												</div><!-- /.liquid-img-group-container -->
@@ -285,19 +360,7 @@
 										</div><!-- /.liquid-img-group-inner -->
 									</div><!-- /.liquid-img-group-container -->
 	
-									<div class="liquid-img-group-container w-70">
-										<div class="liquid-img-group-inner">
-											<div class="liquid-img-group-single" data-shadow-style="3" data-roundness="8">
-												<div class="liquid-img-group-img-container">
-													<div class="liquid-img-container-inner" data-parallax="true" data-parallax-from='{"translateX":1,"translateY":32}' data-parallax-to='{"translateX":-56,"translateY":-181}' data-parallax-options='{"overflowHidden":false,"easing":"linear"}'>
-														<figure>
-															<img alt="Manage" src="./assets/demo/misc/sc-4.jpg" />
-														</figure>
-													</div><!-- /.liquid-img-container-inner -->
-												</div><!-- /.liquid-img-group-container -->
-											</div><!-- /.liquid-img-group-single -->
-										</div><!-- /.liquid-img-group-inner -->
-									</div><!-- /.liquid-img-group-container -->
+									
 								</div><!-- /.lqd-parallax-images-2 -->
 
 							</div><!-- /.col-md-6 hidden-xs hidden-sm -->
@@ -329,7 +392,7 @@
 												<div class="liquid-img-group-img-container">
 													<div class="liquid-img-container-inner" data-parallax="true" data-parallax-options='{ "overflowHidden": false, "easing": "linear" }' data-parallax-from='{ "translateY": 160 }' data-parallax-to='{ "translateY": -50 }'>
 														<figure>
-															<img src="./assets/demo/misc/iphone-1.png" alt="iPhone">
+															<img src="./imgs/iphone-1.png" alt="iPhone">
 														</figure>
 													</div><!-- /.liquid-img-group-inner -->
 												</div><!-- /.liquid-img-group-content -->
@@ -339,17 +402,17 @@
 												<div class="liquid-img-group-img-container">
 													<div class="liquid-img-container-inner" data-parallax="true" data-parallax-options='{ "overflowHidden": false, "easing": "linear" }' data-parallax-from='{ "translateY": 185 }' data-parallax-to='{ "translateY": -110 }'>
 														<figure>
-															<img src="./assets/demo/misc/iphone-2.png" alt="iPhone">
+															<img src="./imgs/iphone-2.png" alt="iPhone">
 														</figure>
 													</div><!-- /.liquid-img-group-inner -->
 												</div><!-- /.liquid-img-group-content -->
 											</div><!-- /.liquid-img-group-single -->
 											
-											<div class="liquid-img-group-single w-75" data-shadow-style="3" data-roundness="8">
+											<div class="liquid-img-group-single w-65" data-shadow-style="3" data-roundness="8">
 												<div class="liquid-img-group-img-container">
 													<div class="liquid-img-container-inner" data-parallax="true" data-parallax-options='{ "overflowHidden": false, "easing": "linear" }' data-parallax-from='{"translateX":60, "translateY":200, "scaleX":0.5, "scaleY":0.5}' data-parallax-to='{"translateX":160, "translateY":-79, "scaleX":1.25, "scaleY":1.25}'>
 														<figure>
-															<img src="./assets/demo/misc/sc-1.jpg" alt="Screenshot">
+															<img src="./imgs/sc-1-full.png" alt="Screenshot">
 														</figure>
 													</div><!-- /.liquid-img-group-inner -->
 												</div><!-- /.liquid-img-group-content -->
@@ -466,7 +529,7 @@
 											<div class="liquid-img-group-img-container">
 												<div class="liquid-img-container-inner">
 													<figure data-responsive-bg="true">
-														<img src="./assets/demo/misc/browser-sc-2.jpg" alt="Beer Finder" />
+														<img src="./imgs/browser-sc-2.jpg" alt="Beer Finder" />
 													</figure>
 												</div><!-- /.liquid-img-container-inner -->
 											</div><!-- /.liquid-img-group-img-container -->
@@ -575,7 +638,7 @@
 											<a href="https://app.beerfinderapp.com/" class="btn btn-solid btn-md round btn-solid border-thick btn-gradient color-secondary font-size-14 text-uppercase font-weight-bold ltr-sp-1 px-2">
 												<span>
 													<span class="btn-gradient-bg"></span>
-													<span class="btn-txt">OPEN APP</span>
+													<span class="btn-txt">OPEN WEB APP</span>
 													<span class="btn-gradient-bg btn-gradient-bg-hover"></span>
 													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" class="btn-gradient-border" width="100%" height="100%">
 														<defs>
@@ -587,6 +650,16 @@
 														<rect x="0.5" y="0.5" rx="4px" ry="4px" width="100%" height="100%" stroke="url(#svg-border-5c594d69345261)"></rect>
 													</svg>
 												</span>
+											</a>
+
+											<a href="https://play.google.com/store/apps/details?id=com.ccetours.beerfinder" target="_blank" class="google-play-btn" style="margin-left: 20px;">
+												<svg class="play-icon" viewBox="0 0 24 24">
+													<path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+												</svg>
+												<div class="btn-text">
+													<span class="small">GET IT ON</span>
+													<span class="large">Google Play</span>
+												</div>
 											</a>
 
 										</div><!-- /.col-md-6 col-md-offset-3 -->
