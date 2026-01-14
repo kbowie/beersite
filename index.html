@@ -957,7 +957,7 @@
 			});
 
 			// Handle form submission
-			document.getElementById('contactForm').addEventListener('submit', function(e) {
+			document.getElementById('contactForm').addEventListener('submit', async function(e) {
 				e.preventDefault();
 				
 				// Get form values
@@ -971,29 +971,29 @@
 					return;
 				}
 				
-				// Create email content
-				const emailSubject = encodeURIComponent('Contact Form Submission from Beer Finder');
-				const emailBody = encodeURIComponent(
-					`Contact Form Submission\n\n` +
-					`Name: ${name}\n` +
-					`Email: ${email}\n\n` +
-					`Message:\n${message}\n\n` +
-					`Sent from: ${window.location.href}`
-				);
-				
-				// Open email client with pre-filled content
-				window.location.href = `mailto:info@beerfinderapp.com?subject=${emailSubject}&body=${emailBody}`;
-				
-				// Show success message
-				showContactSuccess();
-				
-				// Reset form
-				this.reset();
-				
-				// Close modal after 3 seconds
-				setTimeout(() => {
-					closeContactModal();
-				}, 3000);
+				try {
+					// Send via AJAX to serverless function
+					const response = await fetch("https://app.beerfinderapp.com/.netlify/functions/sendEmail", {
+						method: "POST",
+						headers: { "Content-Type": "application/json" },
+						body: JSON.stringify({ name, email, message })
+					});
+					
+					const result = await response.json();
+					
+					if (result.success) {
+						showContactSuccess();
+						this.reset();
+						// Close modal after 3 seconds
+						setTimeout(() => {
+							closeContactModal();
+						}, 3000);
+					} else {
+						showContactError('Error sending message. Please try again.');
+					}
+				} catch (error) {
+					showContactError('Failed to send. Try again later.');
+				}
 			});
 
 			function showContactSuccess() {
